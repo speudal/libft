@@ -6,7 +6,7 @@
 #    By: tduval <tduval@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/22 13:08:51 by tduval            #+#    #+#              #
-#    Updated: 2018/12/02 17:07:51 by tduval           ###   ########.fr        #
+#    Updated: 2018/12/11 15:26:04 by tduval           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -128,15 +128,20 @@ all : $(NAME)
 
 $(NAME) : $(OBJS)
 	@ar rcs $(NAME) $(OBJS)
-	@echo "\x1b[32;01m[LIBFT COMPILED]"
+	@echo "\x1b[36m[LIBFT COMPILED]\x1b[0m"
 
 clean :
 	@rm -f $(OBJS)
-	@echo "\x1b[32;01m[OBJS CLEANED]"
+	@echo "\x1b[33;01mlibft : cleaning...\x1b[0m"
+	@echo "\x1b[32;01m[LIBFT CLEANED]\x1b[0m"
 
 fclean : clean
 	@rm -f $(NAME)
-	@echo "\x1b[32;01m[LIBFT.A CLEANED]"
+	@echo "\x1b[33;01mlibft : fcleaning...\x1b[0m"
+	@echo "\x1b[32;01m[LIBFT FCLEANED]\x1b[0m"
+
+%.o : %.c
+	@gcc -c $(CFLAGS) $< -o $@
 
 re : fclean all
 
