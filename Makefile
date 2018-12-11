@@ -6,7 +6,7 @@
 #    By: tduval <tduval@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/22 13:08:51 by tduval            #+#    #+#              #
-#    Updated: 2018/12/11 15:26:04 by tduval           ###   ########.fr        #
+#    Updated: 2018/12/11 17:44:41 by tduval           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -62,6 +62,7 @@ SRCS	=	./srcs/dispatcher.c		\
 			./srcs/ft_striter.c		\
 			./srcs/ft_striteri.c	\
 			./srcs/ft_strjoin.c		\
+			./srcs/ft_strfjoin.c	\
 			./srcs/ft_strlcat.c		\
 			./srcs/ft_strlen.c		\
 			./srcs/ft_strmap.c		\
