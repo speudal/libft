@@ -6,11 +6,10 @@
 /*   By: tduval <tduval@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/30 19:07:16 by tduval            #+#    #+#             */
-/*   Updated: 2018/11/30 22:28:15 by tduval           ###   ########.fr       */
+/*   Updated: 2018/12/11 17:26:44 by tduval           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include "libft.h"
 
 static int	split1(int s, long long n, t_flags elem, int *j)
@@ -27,7 +26,8 @@ static int	split1(int s, long long n, t_flags elem, int *j)
 			*j = 1;
 			i++;
 		}
-		else if (ft_strchr(elem.options, ' ') && n > -1)
+		else if (ft_strchr(elem.options, ' ') && !ft_strchr(elem.options, '+')
+					&& n > -1)
 		{
 			ft_putchar(' ');
 			*j = 1;
@@ -70,7 +70,7 @@ static int	split2(long long n, int s, int u, t_flags elem)
 	if (!ft_strchr(elem.options, '0') && elem.accuracy == -1 && n < 0)
 		ft_putchar('-');
 	if (ft_strchr(elem.options, '+') && !ft_strchr(elem.options, '0') &&
-		elem.width > s && elem.accuracy == -1)
+		elem.width >= s && elem.accuracy == -1 && n > -1)
 	{
 		ft_putchar('+');
 		i++;
@@ -79,8 +79,9 @@ static int	split2(long long n, int s, int u, t_flags elem)
 		print_llld((long long)n);
 	if (ft_strchr(elem.options, '-'))
 	{
-		while (elem.width > s + (((ft_strchr(elem.options, ' ') ||
-				ft_strchr(elem.options, '+')) && n > -1) ? 1 : 0) +
+		while (elem.width > s + ((((ft_strchr(elem.options, ' ') ||
+				ft_strchr(elem.options, '+')) && n > -1) ? 1 : 0) ||
+					(n < 0 && elem.accuracy > s - 1 ? 1 : 0)) +
 					(u != -1 && u > s ? u - s : 0))
 		{
 			ft_putchar(' ');
