@@ -6,7 +6,7 @@
 #    By: tduval <tduval@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/22 13:08:51 by tduval            #+#    #+#              #
-#    Updated: 2018/12/11 17:44:41 by tduval           ###   ########.fr        #
+#    Updated: 2018/12/12 13:38:10 by tduval           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -82,6 +82,7 @@ SRCS	=	./srcs/dispatcher.c		\
 			./srcs/ft_swap.c		\
 			./srcs/ft_tolower.c		\
 			./srcs/ft_toupper.c		\
+			./srcs/get_next_line.c	\
 			./srcs/get_flags.c		\
 			./srcs/padding_bx.c		\
 			./srcs/padding_d.c		\
