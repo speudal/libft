@@ -6,7 +6,7 @@
 /*   By: tduval <tduval@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/26 16:28:48 by tduval            #+#    #+#             */
-/*   Updated: 2018/12/02 16:51:05 by tduval           ###   ########.fr       */
+/*   Updated: 2018/12/12 21:11:22 by tduval           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,9 @@ static t_flags	split_fill(const char *str, int *i, t_flags elem)
 		(*i)++;
 	}
 	elem.width = ft_atoi(str + *i);
-	while (ft_isdigit(str[*i]) && str[*i])
+	if (str[*i] == '*')
+		elem.width = -1;
+	while ((str[*i] == '*' || ft_isdigit(str[*i])) && str[*i])
 		(*i)++;
 	if (str[*i] == '.')
 	{

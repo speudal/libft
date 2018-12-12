@@ -6,7 +6,7 @@
 /*   By: tduval <tduval@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/26 21:45:30 by tduval            #+#    #+#             */
-/*   Updated: 2018/12/02 17:05:17 by tduval           ###   ########.fr       */
+/*   Updated: 2018/12/12 21:09:46 by tduval           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,8 @@ int			print_s(va_list ap, t_flags elem)
 	int			j;
 
 	i = 0;
+	if (elem.width == -1)
+		elem.width = va_arg(ap, int);
 	s = va_arg(ap, char *);
 	if (!s)
 	{
