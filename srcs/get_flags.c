@@ -15,11 +15,11 @@
 
 static t_flags	*split_get(int *t, t_flags *list, const char *str)
 {
-	int	i;
 	int	p;
+	int	i;
 
-	(*t) = 0;
 	p = 0;
+	(*t) = 0;
 	i = -1;
 	while (str[++i])
 	{
@@ -43,11 +43,9 @@ t_flags			*get_flags(const char *str, int *t)
 	t_flags *list;
 	int		ct;
 	int		i;
-	int		p;
 
 	ct = 0;
 	i = -1;
-	p = 0;
 	while (str[++i])
 		if (str[i] == '%')
 			ct++;

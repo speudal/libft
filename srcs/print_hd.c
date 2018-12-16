@@ -33,14 +33,12 @@ static int	geti(short n)
 int			print_hd(va_list ap, t_flags elem)
 {
 	short	n;
-	short	cp;
 	int		i;
 
 	i = 1;
 	if (elem.width == -1)
 		elem.width = va_arg(ap, int);
 	n = (short)va_arg(ap, int);
-	cp = n;
 	if (n == -32768)
 		i = 6;
 	else

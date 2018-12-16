@@ -71,11 +71,9 @@ int			padding_bx(unsigned long long n, int s, t_flags elem)
 {
 	int i;
 	int	w;
-	int	q;
 	int u;
 
 	i = 0;
-	q = 0;
 	w = elem.width;
 	if (ft_strchr(elem.options, '#') && elem.accuracy == -1 &&
 			(elem.width < s || ft_strchr(elem.options, '0')) && n)

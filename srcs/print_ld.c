@@ -34,14 +34,12 @@ static int	geti(long n)
 int			print_ld(va_list ap, t_flags elem)
 {
 	long	n;
-	long	cp;
 	int		i;
 
 	i = 1;
 	if (elem.width == -1)
 		elem.width = va_arg(ap, int);
 	n = va_arg(ap, long);
-	cp = n;
 	if (n == -9223372036854775807 - 1)
 		i = 20;
 	else
