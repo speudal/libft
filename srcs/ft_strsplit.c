@@ -6,7 +6,7 @@
 /*   By: tduval <tduval@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/28 21:32:21 by tduval            #+#    #+#             */
-/*   Updated: 2018/11/09 16:44:05 by tduval           ###   ########.fr       */
+/*   Updated: 2018/12/23 04:53:33 by tduval           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ static	size_t	ft_how_long(char const *s, char c)
 	size_t	i;
 
 	i = 0;
-	while (*s != c)
+	while (*s && *s != c)
 	{
 		s++;
 		i++;
@@ -55,7 +55,7 @@ char			**ft_strsplit(char const *s, char c)
 		return (0);
 	while (++i < ct)
 	{
-		while (*s == c)
+		while (*s && *s == c)
 			s++;
 		if (!(tab[i] = (char *)malloc(sizeof(char) * (ft_how_long(s, c) + 1))))
 			return (0);
