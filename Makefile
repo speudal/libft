@@ -6,7 +6,7 @@
 #    By: marvin <marvin@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/22 13:08:51 by tduval            #+#    #+#              #
-#    Updated: 2019/03/03 01:36:48 by marvin           ###   ########.fr        #
+#    Updated: 2019/03/03 01:41:16 by marvin           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -133,21 +133,21 @@ all : $(NAME)
 
 $(NAME) : $(OBJS_LIBFT)
 	@ar rcs $(NAME) $(OBJS_LIBFT)
-	@echo "\x1b[36m[LIBFT COMPILED]\x1b[0m"
+	@echo "\e[32m[LIBFT COMPILED]\e[39m"
 
 ft_printf : $(OBJS_LIBFT) $(OBJS_PRINTF)
 	@ar rcs $(NAME) $(OBJS_LIBFT) $(OBJS_PRINTF)
-	@echo "\x1b[36m[LIBFT WITH FT_PRINTF COMPILED]\x1b[0m"
+	@echo "\e[32m[LIBFT WITH FT_PRINTF COMPILED]\e[39m"
 
 clean :
 	@rm -f $(OBJS_LIBFT) $(OBJS_PRINTF)
-	@echo "\x1b[33;01mlibft : cleaning...\x1b[0m"
-	@echo "\x1b[32;01m[LIBFT CLEANED]\x1b[0m"
+	@echo "\e[33mlibft : cleaning...\e[39m"
+	@echo "\e[32m[LIBFT CLEANED]\e[39m"
 
 fclean : clean
 	@rm -f $(NAME)
-	@echo "\x1b[33;01mlibft : fcleaning...\x1b[0m"
-	@echo "\x1b[32;01m[LIBFT FCLEANED]\x1b[0m"
+	@echo "\e[33mlibft : fcleaning...\e[39m"
+	@echo "\e[32m[LIBFT FCLEANED]\e[39m"
 
 %.o : %.c
 	@gcc -c $(CFLAGS) $< -o $@
