@@ -3,18 +3,18 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: tduval <tduval@student.42.fr>              +#+  +:+       +#+         #
+#    By: marvin <marvin@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/22 13:08:51 by tduval            #+#    #+#              #
-#    Updated: 2018/12/12 13:38:10 by tduval           ###   ########.fr        #
+#    Updated: 2019/03/03 01:34:18 by marvin           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	=	libft.a
+NAME		=	libft.a
 
-CFLAGS	=	-Wall -Werror -Wextra -I.
+CFLAGS		=	-Wall -Werror -Wextra -I.
 
-SRCS	=	./srcs/dispatcher.c		\
+SRCS_LIBFT	= ./srcs/dispatcher.c		\
 			./srcs/fill_flags.c		\
 			./srcs/ft_abs.c			\
 			./srcs/ft_atoi.c		\
@@ -40,7 +40,6 @@ SRCS	=	./srcs/dispatcher.c		\
 			./srcs/ft_memdel.c		\
 			./srcs/ft_memmove.c		\
 			./srcs/ft_memset.c		\
-			./srcs/ft_printf.c		\
 			./srcs/ft_putchar.c		\
 			./srcs/ft_putchar_fd.c	\
 			./srcs/ft_putendl.c		\
@@ -82,7 +81,9 @@ SRCS	=	./srcs/dispatcher.c		\
 			./srcs/ft_swap.c		\
 			./srcs/ft_tolower.c		\
 			./srcs/ft_toupper.c		\
-			./srcs/get_next_line.c	\
+			./srcs/get_next_line.c
+
+SRCS_PRINTF	=	./srcs/ft_printf.c		\
 			./srcs/get_flags.c		\
 			./srcs/padding_bx.c		\
 			./srcs/padding_d.c		\
@@ -124,16 +125,22 @@ SRCS	=	./srcs/dispatcher.c		\
 			./srcs/print_sx.c		\
 			./srcs/print_u.c
 
-OBJS =	$(SRCS:.c=.o)
+OBJS_LIBFT	=	$(SRCS_LIBFT:.c=.o)
+
+OBJS_PRINTF	=	$(SRCS_PRINTF:.c=.o)
 
 all : $(NAME)
 
-$(NAME) : $(OBJS)
-	@ar rcs $(NAME) $(OBJS)
+$(NAME) : $(OBJS_LIBFT)
+	@ar rcs $(NAME) $(OBJS_LIBFT)
 	@echo "\x1b[36m[LIBFT COMPILED]\x1b[0m"
 
+ft_printf : $(OBJS_LIBFT) $(OBJS_PRINTF)
+	@ar rcs $(NAME) $(OBJS_LIBFT) $(OBJS_PRINTF)
+	@echo "\x1b[36m[LIBFT WITH FT_PRINTF COMPILED]\x1b[0m"
+
 clean :
-	@rm -f $(OBJS)
+	@rm -f $(OBJS_LIBFT) $(OBJS_PRINTF)
 	@echo "\x1b[33;01mlibft : cleaning...\x1b[0m"
 	@echo "\x1b[32;01m[LIBFT CLEANED]\x1b[0m"
 
