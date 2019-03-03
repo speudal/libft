@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/26 19:28:15 by tduval            #+#    #+#             */
-/*   Updated: 2019/03/03 02:15:18 by marvin           ###   ########.fr       */
+/*   Updated: 2019/03/03 02:25:54 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -108,7 +108,25 @@ int					ft_abs(int n);
 int					ft_sqrt(int n);
 int					ft_swap(int *i, int *j);
 int					ft_sum(int *tab, size_t n);
+int					ft_atoi(const char *str);
+int					ft_isdigit(int c);
+char				*ft_strchr(const char *s, int c);
+char				*ft_strdup(const char *s);
+void				*ft_memchr(const void *s, int c, size_t n);
+char				*ft_strnew(size_t size);
+void				*ft_memalloc(size_t size);
+void				*ft_memset(void *s, int c, size_t n);
+int					get_next_line(const int fd, char **line);
+
+/*
+**	ft_printf relative functions
+*/
+
 int					ft_printf(const char *format, ...);
+t_flags				*get_flags(const char *str, int *ct);
+t_flags				fill_flags(const char *str);
+int					check_sizes(char *str, char conv);
+int					dispatcher(t_flags elem, va_list ap);
 int					print_c(va_list ap, t_flags elem);
 int					print_s(va_list ap, t_flags elem);
 int					print_p(va_list ap, t_flags elem);
@@ -144,28 +162,15 @@ int					print_hbx(va_list ap, t_flags elem);
 int					print_hhbx(va_list ap, t_flags elem);
 int					print_lbx(va_list ap, t_flags elem);
 int					print_llbx(va_list ap, t_flags elem);
-void				print_llld(long long n);
-void				print_lllo(unsigned long long n);
-void				print_lllu(unsigned long long n);
-void				print_lllsx(unsigned long long n);
-void				print_lllbx(unsigned long long n);
-int					ft_atoi(const char *str);
-int					ft_isdigit(int c);
-char				*ft_strchr(const char *s, int c);
-char				*ft_strdup(const char *s);
-void				*ft_memchr(const void *s, int c, size_t n);
-char				*ft_strnew(size_t size);
-void				*ft_memalloc(size_t size);
-void				*ft_memset(void *s, int c, size_t n);
 int					padding_d(long long n, int s, t_flags elem);
 int					padding_u(unsigned long long n, int s, t_flags elem);
 int					padding_o(unsigned long long n, int s, t_flags elem);
 int					padding_sx(unsigned long long n, int s, t_flags elem);
 int					padding_bx(unsigned long long n, int s, t_flags elem);
-int					dispatcher(t_flags elem, va_list ap);
-int					check_sizes(char *str, char conv);
-t_flags				fill_flags(const char *str);
-t_flags				*get_flags(const char *str, int *ct);
-int					get_next_line(const int fd, char **line);
+void				print_llld(long long n);
+void				print_lllo(unsigned long long n);
+void				print_lllu(unsigned long long n);
+void				print_lllsx(unsigned long long n);
+void				print_lllbx(unsigned long long n);
 
 #endif
