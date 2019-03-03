@@ -6,7 +6,7 @@
 #    By: marvin <marvin@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/22 13:08:51 by tduval            #+#    #+#              #
-#    Updated: 2019/03/03 01:41:16 by marvin           ###   ########.fr        #
+#    Updated: 2019/03/03 01:55:17 by marvin           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -81,6 +81,7 @@ SRCS_LIBFT	=	./srcs/dispatcher.c		\
 				./srcs/ft_swap.c		\
 				./srcs/ft_tolower.c		\
 				./srcs/ft_toupper.c		\
+				./srcs/ft_noleak.c		\
 				./srcs/get_next_line.c
 
 SRCS_PRINTF	=	./srcs/ft_printf.c		\
