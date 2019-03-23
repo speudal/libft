@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/01 00:17:46 by tduval            #+#    #+#             */
-/*   Updated: 2019/03/03 02:26:02 by marvin           ###   ########.fr       */
+/*   Updated: 2019/03/23 23:22:50 by tduval           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,11 +77,11 @@ int	(*g_array_print[60])(va_list ap, t_flags elem) = {
 
 int			check_sizes(char *str, char conv)
 {
-	return (ft_strchr("cspdiouxXDOU%", conv) &&
-			((!ft_strcmp(str, "h") || !ft_strcmp(str, "hh") ||
-				!ft_strcmp(str, "l") || !ft_strcmp(str, "ll") ||
-				!ft_strcmp(str, "") || !ft_strcmp(str, "z") ||
-				!ft_strcmp(str, "j"))));
+	return (ft_strchr("cspdiouxXDOU%", conv)
+			&& ((!ft_strcmp(str, "h") || !ft_strcmp(str, "hh")
+				|| !ft_strcmp(str, "l") || !ft_strcmp(str, "ll")
+				|| !ft_strcmp(str, "") || !ft_strcmp(str, "z")
+				|| !ft_strcmp(str, "j"))));
 }
 
 static int	split_dispatcher(va_list ap, t_flags elem, int *i)
@@ -94,8 +94,8 @@ static int	split_dispatcher(va_list ap, t_flags elem, int *i)
 		*i += 2;
 	if (!(ft_strcmp(elem.size, "l")) && elem.conv != '%')
 		*i += 3;
-	if ((!(ft_strcmp(elem.size, "ll")) ||
-		!(ft_strcmp(elem.size, "j"))) && elem.conv != '%')
+	if ((!(ft_strcmp(elem.size, "ll"))
+			|| !(ft_strcmp(elem.size, "j"))) && elem.conv != '%')
 		*i += 4;
 	if ((!(ft_strcmp(elem.size, "z")) &&
 		(elem.conv == 'd' || elem.conv == 'i')))
