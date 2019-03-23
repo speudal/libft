@@ -6,13 +6,15 @@
 #    By: marvin <marvin@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/22 13:08:51 by tduval            #+#    #+#              #
-#    Updated: 2019/03/23 22:42:49 by tduval           ###   ########.fr        #
+#    Updated: 2019/03/23 22:56:06 by tduval           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME		=	libft.a
 
-CFLAGS		=	-Wall -Werror -Wextra -I.
+CFLAGS		=	-Wall -Werror -Wextra
+
+CPPFLAGS	=	-I .
 
 SRCS_LIBFT	=	./srcs/dispatcher.c		\
 				./srcs/fill_flags.c		\
@@ -134,11 +136,11 @@ all : $(NAME)
 
 $(NAME) : $(OBJS_LIBFT)
 	@ar rcs $(NAME) $(OBJS_LIBFT)
-	@printf "\e[32m[LIBFT COMPILED]\e[39m\n"
+	@printf "\e[34m[LIBFT COMPILED]\e[39m\n"
 
 ft_printf : $(OBJS_LIBFT) $(OBJS_PRINTF)
 	@ar rcs $(NAME) $(OBJS_LIBFT) $(OBJS_PRINTF)
-	@printf "\e[32m[LIBFT WITH FT_PRINTF COMPILED]\e[39m\n"
+	@printf "\e[34m[LIBFT WITH FT_PRINTF COMPILED]\e[39m\n"
 
 clean :
 	@rm -f $(OBJS_LIBFT) $(OBJS_PRINTF)
@@ -151,7 +153,13 @@ fclean : clean
 	@printf "\e[32m[LIBFT FCLEANED]\e[39m\n"
 
 %.o : %.c
-	@gcc -c $(CFLAGS) $< -o $@
+	@tput sc
+	@printf "Compiling : \e[33m"
+	@echo -n $<
+	@printf "\e[39m"
+	@tput rc
+	@tput el
+	@gcc -c $(CFLAGS) $(CPPFLAGS) $< -o $@
 
 re : fclean all
 
