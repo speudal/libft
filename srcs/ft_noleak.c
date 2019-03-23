@@ -6,18 +6,18 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/03 01:44:24 by marvin            #+#    #+#             */
-/*   Updated: 2019/03/03 01:44:24 by marvin           ###   ########.fr       */
+/*   Updated: 2019/03/23 22:41:41 by tduval           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdarg.h>
 #include "libft.h"
 
-int					ft_intnoleak(signed char num, int ret_value, ...)
+int					ft_intnoleak(int num, int ret_value, ...)
 {
-	va_list		ap;
-	signed char	i;
 	void		*tmp;
+	va_list		ap;
+	int			i;
 
 	i = 0;
 	va_start(ap, ret_value);
@@ -31,11 +31,11 @@ int					ft_intnoleak(signed char num, int ret_value, ...)
 	return (ret_value);
 }
 
-void				*ft_voidnoleak(signed char num, ...)
+void				*ft_voidnoleak(int num, ...)
 {
-	va_list		ap;
-	signed char	i;
 	void		*tmp;
+	va_list		ap;
+	int			i;
 
 	i = 0;
 	va_start(ap, num);

@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/26 19:28:15 by tduval            #+#    #+#             */
-/*   Updated: 2019/03/03 02:25:54 by marvin           ###   ########.fr       */
+/*   Updated: 2019/03/23 22:41:52 by tduval           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -102,8 +102,8 @@ void				ft_lstadd(t_list **alst, t_list *new);
 void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 int					ft_factorial(int n);
-int					ft_intnoleak(signed char num, int ret_value, ...);
-void				*ft_voidnoleak(signed char num, ...);
+int					ft_intnoleak(int num, int ret_value, ...);
+void				*ft_voidnoleak(int num, ...);
 int					ft_abs(int n);
 int					ft_sqrt(int n);
 int					ft_swap(int *i, int *j);
