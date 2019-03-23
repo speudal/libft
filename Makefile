@@ -6,7 +6,7 @@
 #    By: marvin <marvin@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/22 13:08:51 by tduval            #+#    #+#              #
-#    Updated: 2019/03/23 22:57:36 by tduval           ###   ########.fr        #
+#    Updated: 2019/03/23 23:20:48 by tduval           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -153,12 +153,8 @@ fclean : clean
 	@printf "\e[32m[LIBFT FCLEANED]\e[39m\n"
 
 %.o : %.c
-	@tput sc
-	@printf "Compiling : \e[33m"
-	@echo -n $<
-	@printf "\e[39m"
-	@tput rc
-	@tput el
+	@printf "\e[33mCompiling : \e[39m"
+	@echo $<
 	@gcc -c $(CFLAGS) $(CPPFLAGS) $< -o $@
 
 re : fclean all
