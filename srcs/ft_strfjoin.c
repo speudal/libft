@@ -6,7 +6,7 @@
 /*   By: tduval <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/11 17:41:22 by tduval            #+#    #+#             */
-/*   Updated: 2018/12/11 17:42:46 by tduval           ###   ########.fr       */
+/*   Updated: 2019/09/18 09:30:53 by speudal          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,8 @@
 
 void	free_both(char *s1, char *s2)
 {
-	if (s1)
-		free(s1);
-	if (s2)
-		free(s2);
+	ft_memdel((void **)&s1);
+	ft_memdel((void **)&s2);
 }
 
 char	*ft_strfjoin(char *s1, char *s2)
