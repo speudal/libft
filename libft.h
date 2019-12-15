@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/26 19:28:15 by tduval            #+#    #+#             */
-/*   Updated: 2019/03/23 22:41:52 by tduval           ###   ########.fr       */
+/*   Updated: 2019/12/15 20:56:11 by speudal          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -117,6 +117,7 @@ char				*ft_strnew(size_t size);
 void				*ft_memalloc(size_t size);
 void				*ft_memset(void *s, int c, size_t n);
 int					get_next_line(const int fd, char **line);
+int					ft_rgb(int r, int g, int b);
 
 /*
 **	ft_printf relative functions
