@@ -6,7 +6,7 @@
 #    By: marvin <marvin@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/22 13:08:51 by tduval            #+#    #+#              #
-#    Updated: 2019/09/18 09:40:13 by speudal          ###   ########.fr        #
+#    Updated: 2019/12/15 20:55:02 by speudal          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -50,6 +50,7 @@ SRCS_LIBFT	=	./srcs/dispatcher.c		\
 				./srcs/ft_putnbr_fd.c	\
 				./srcs/ft_putstr.c		\
 				./srcs/ft_putstr_fd.c	\
+				./srcs/ft_rgb.c			\
 				./srcs/ft_sort.c		\
 				./srcs/ft_sqrt.c		\
 				./srcs/ft_strcat.c		\
