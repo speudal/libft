@@ -2,11 +2,18 @@
 
 The first C project at 42. The goal is to create from scratch basic libC functions.
 
+## Prerequisites
+- make
+
+## Features
+- [ft\_printf](https://github.com/theduv/ft_printf) : another projects that consists on implementing the libC printf function
+- [get\_next\_line](https://github.com/theduv/get_next_line) : another projects that consists on implenting a readline function
+
 ## Build
 
-- build the library without ft_printf :
+- build the library without ft\_printf :
 	`make`
-- build the library with ft_printf :
+- build the library with ft\_printf :
 	`make ft_printf`
 
 ## LibC functions
