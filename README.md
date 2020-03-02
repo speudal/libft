@@ -12,7 +12,7 @@ The first C project at 42. The goal is to create from scratch basic libC functio
 ## Library functions
 
 | **Function** | **LibC function** | **Usage** |
-| ------------ | ------ | --------- |
+| ------------ | --- | --------- |
 |ft\_memset|memset|fills a byte string with a byte value|
 |ft\_bzero|bzero|writes zeroes to a byte string|
 |ft\_memcpy|memcpy|copies memory area|
