@@ -4,7 +4,7 @@ The first C project at 42. The goal is to create from scratch basic libC functio
 
 ## Features
 - [ft\_printf](https://github.com/theduv/ft_printf) : another projects that consists on implementing the libC printf function
-- [get\_next\_line](https://github.com/theduv/get_next_line) : another projects that consists on implenting a readline function
+- [get\_next\_line](https://github.com/theduv/libft/blob/master/srcs/get_next_line.c) : another projects that consists on implenting a readline function
 
 ## Build
 
