@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/26 19:28:15 by tduval            #+#    #+#             */
-/*   Updated: 2019/12/15 20:56:11 by speudal          ###   ########.fr       */
+/*   Updated: 2020/03/02 13:04:42 by tduval           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -102,20 +102,9 @@ void				ft_lstadd(t_list **alst, t_list *new);
 void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 int					ft_factorial(int n);
-int					ft_intnoleak(int num, int ret_value, ...);
-void				*ft_voidnoleak(int num, ...);
 int					ft_abs(int n);
 int					ft_sqrt(int n);
 int					ft_swap(int *i, int *j);
-int					ft_sum(int *tab, size_t n);
-int					ft_atoi(const char *str);
-int					ft_isdigit(int c);
-char				*ft_strchr(const char *s, int c);
-char				*ft_strdup(const char *s);
-void				*ft_memchr(const void *s, int c, size_t n);
-char				*ft_strnew(size_t size);
-void				*ft_memalloc(size_t size);
-void				*ft_memset(void *s, int c, size_t n);
 int					get_next_line(const int fd, char **line);
 int					ft_rgb(int r, int g, int b);
 
