@@ -1,1 +1,10 @@
-This is the lib that I use for my current projects at 42.
+# LIBFT
+
+The first C project at 42. The goal is to create from scratch basic libC functions.
+
+## Build
+
+- build the library without ft_printf :
+	`make`
+- build the library with ft_printf :
+	`make ft_printf`
