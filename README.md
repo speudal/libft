@@ -42,6 +42,7 @@ The first C project at 42. The goal is to create from scratch basic libC functio
 |ft\_toupper|toupper|lower case to upper case letter conversion|
 |ft\_tolower|tolower|upper case to lower case letter conversion|
 |-----------|-------|------------------------------------------|
+/*
 | **Function** | **Usage** |
 | ------------ | --------- |
 |ft\_memalloc|allocates memory in a safe way|
@@ -50,4 +51,4 @@ The first C project at 42. The goal is to create from scratch basic libC functio
 |ft\_strdel|frees an allocated string|
 |ft\_strclr|reset to null characters a string|
 |ft\_striter|applies a function to all characters in a string|
-|ft\_striteri||
+|ft\_striteri||*/
