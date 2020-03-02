@@ -13,7 +13,7 @@ The first C project at 42. The goal is to create from scratch basic libC functio
 
 | **Function** | **LibC function** | **Usage** |
 | ------------ | ----------------- | --------- |
-|ft\_memset|memset|fills a byte string with a byte value|
+|[ft\_memset](https://github.com/theduv/libft/blob/master/srcs/ft_memset.c)|memset|fills a byte string with a byte value|
 |ft\_bzero|bzero|writes zeroes to a byte string|
 |ft\_memcpy|memcpy|copies memory area|
 |ft\_memccpy|memccpy|copies string until character found|
