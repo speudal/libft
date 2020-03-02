@@ -12,7 +12,7 @@ The first C project at 42. The goal is to create from scratch basic libC functio
 ## Library functions
 
 | **Function** | **LibC function** | **Usage** |
-| ------------ | --- | --------- |
+| ------------ | ----------------- | --------- |
 |ft\_memset|memset|fills a byte string with a byte value|
 |ft\_bzero|bzero|writes zeroes to a byte string|
 |ft\_memcpy|memcpy|copies memory area|
@@ -41,6 +41,7 @@ The first C project at 42. The goal is to create from scratch basic libC functio
 |ft\_isprint|isprint|printing character test|
 |ft\_toupper|toupper|lower case to upper case letter conversion|
 |ft\_tolower|tolower|upper case to lower case letter conversion|
+|-----------|-------|------------------------------------------|
 | **Function** | **Usage** |
 | ------------ | --------- |
 |ft\_memalloc|allocates memory in a safe way|
