@@ -11,5 +11,6 @@ The first C project at 42. The goal is to create from scratch basic libC functio
 
 ## Library functions
 
-|**Function**|**Original**|**Usage**|
+| **Function** | **Original** | **Usage** |
+| ------------ | ------------ | --------- |
 |ft_memset|memset|fills a byte string with a byte value|
